@@ -1,0 +1,25 @@
+$TTL 1h
+
+foo.org.nz. IN SOA ns1.foo.org.nz. tech.example.net. (
+  20150824  ; Serial Number
+  3h        ; Slave Refresh
+  1h        ; Slave Retry
+  3d        ; Slave Expire
+  1h )      ; Negative ttl
+
+; Name Server Records
+foo.org.nz. IN NS ns1.foo.org.nz.
+foo.org.nz. IN NS ns2.foo.org.nz.
+
+; Address Records
+ns1.foo.org.nz. IN A 172.16.5.4
+ns2.foo.org.nz. IN A 192.168.2.100
+linux-client.foo.org.nz. IN A 172.16.5.30
+
+; CNAME Records
+bsd-server.foo.org.nz. IN CNAME ns1.foo.org.nz.
+www IN CNAME ns1.foo.org.nz.
+
+; MX Records
+foo.org.nz. IN MX 0 ns1.foo.org.nz.
+

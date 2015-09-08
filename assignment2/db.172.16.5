@@ -1,0 +1,20 @@
+$TTL 3h
+
+; SOA Records
+5.16.172.in-addr.arpa. IN SOA ns1.foo.org.nz. tech.somedomain.net. (
+    4    ; serial number
+    3h   ; slave refresh
+    1h   ; slave retry
+    3d   ; slave expires
+    1h ) ; negative ttl
+
+; Nameserver Records
+5.16.172.in-addr.arpa. IN NS ns1.foo.org.nz.
+5.16.172.in-addr.arpa. IN NS ns2.foo.org.nz.
+
+; PTR Records
+4.5.16.172.in-addr.arpa. IN PTR ns1.foo.org.nz.
+30.5.16.172.in-addr.arpa. IN PTR linux-client.foo.org.nz.
+
+; MX Records
+foo.org.nz. IN MX 0 ns1.foo.org.nz.
